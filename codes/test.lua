@@ -32,9 +32,10 @@ end
 function dotest(cases, times)
     for i = 1, #cases do
         local case = cases[i]
-        io.stdout:write(string.format("Case %d: %s", i, case.name))
+        io.stdout:write(string.format("Case %d: %s ", i, case.name))
         for j = 1, 5 do
             io.stdout:write(".")
+            io.stdout:flush()
             collectgarbage()
             local runtime = runtest(case.code, times)
             case.t[#case.t + 1] = runtime
