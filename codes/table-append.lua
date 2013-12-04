@@ -40,4 +40,4 @@ local cases = {
     { name = "use length    ", code = use_length, t = {} },
 }
 
-dotest(cases, dotimes(10, 5))
+dotest(cases, dotimes(50, 5))

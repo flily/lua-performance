@@ -24,4 +24,4 @@ local cases = {
     { name = "Localized", code = localized, t = {} }
 }
 
-dotest(cases, dotimes(100, 5))
+dotest(cases, dotimes(200, 2))
