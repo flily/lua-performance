@@ -1,4 +1,4 @@
 lua-performance
 ===============
 
-Lua performance guide
+A Lua performance guide for Lua and LuaJIT.

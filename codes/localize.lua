@@ -6,7 +6,6 @@ function nonlocal()
     return math.sin(123)
 end
 
-
 local sin = math.sin
 function localized()
     return sin(123)
