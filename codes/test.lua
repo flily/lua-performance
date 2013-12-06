@@ -43,7 +43,7 @@ function dotest(cases, times)
         print()
     end
   
-    print("Case ID", "Case name", "t1", "t2", "t3", "t4", "t5", "avg.", "%")
+    print("ID", "Case name", "t1", "t2", "t3", "t4", "t5", "avg.", "%")
     local base = 0
     for i = 1, #cases do
         local case = cases[i]
