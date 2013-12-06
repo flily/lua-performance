@@ -61,4 +61,4 @@ local cases = {
 --         print(x1, x2, x3)
 --     end
 -- end
-dotest(cases, dotimes(10, 10))
+dotest(cases, dotimes(30, 20))
