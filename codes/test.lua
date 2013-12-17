@@ -65,11 +65,8 @@ function dotimes(t, jt)
 end
 
 function show_interpreter()
-    if is_luajit() then
-        print("In LuaJIT")
-    else
-        print("In Lua")
-    end
+    local t = is_luajit() and "LuaJIT" or "Lua"
+    print(string.format("In %s (%s)", t, _G['_VERSION']))
 end
 
 show_interpreter()
