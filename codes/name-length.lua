@@ -88,5 +88,5 @@ local cases2 = {
     { name = "Local short   ", code = local_short,   t = {} }
 }
 
-dotest(cases1, dotimes(100, 2))
-dotest(cases2, dotimes(100, 2))
+dotest(cases1, dotimes(200, 2))
+dotest(cases2, dotimes(200, 2))
