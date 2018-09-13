@@ -1,7 +1,5 @@
 #!/usr/bin/lua
 
-require 'test'
-
 function table_insert()
     local t = {}
     for i = 1, 1000, 2 do
@@ -33,11 +31,14 @@ function use_length()
     end
 end
 
-local cases = {
-    { name = "table.insert G", code = table_insert,  t = {} },
-    { name = "table.insert L", code = table_insertL,  t = {} },
-    { name = "use counter   ", code = use_counter, t = {} },
-    { name = "use length    ", code = use_length, t = {} },
+return {
+    name = "table-append",
+    desc = "append item to a table",
+    cases = {
+        { name = "table.insert G", entry = table_insert },
+        { name = "table.insert L", entry = table_insertL },
+        { name = "use counter   ", entry = use_counter },
+        { name = "use length    ", entry = use_length },
+    }
 }
 
-dotest(cases, dotimes(50, 5))

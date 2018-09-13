@@ -1,7 +1,5 @@
 #!/usr/bin/lua
 
-require 'test'
-
 function add_or(a, b)
     local c = b or 1
     return a + c
@@ -32,9 +30,11 @@ function test_if()
     return sum
 end
 
-local cases = {
-    { name = "Use if    ", code = test_if,  t = {} },
-    { name = "Use or    ", code = test_or, t = {} },
+return {
+    name = "set-default-value",
+    desc = "set default value with 'if' or 'or'",
+    cases = {
+        { name = "Use if    ", entry = test_if },
+        { name = "Use or    ", entry = test_or },
+    },
 }
-
-dotest(cases, dotimes(500, 50))

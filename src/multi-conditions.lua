@@ -1,7 +1,5 @@
 #!/usr/bin/lua
 
-require 'test'
-
 local states = {
     "alabama",          "alaska",       "arizona",          "arkansas",
     "california",       "colorado",     "connecticut",      "delaware",
@@ -42,9 +40,12 @@ function use_table()
     return x
 end
 
-local cases = {
-    { name = "Use OR   ", code = use_or,  t = {} },
-    { name = "Use table", code = use_table, t = {} }
+return {
+    name = "multi-conditions",
+    desc = "judge with table and inline code",
+    cases = {
+        { name = "Use OR   ", entry = use_or },
+        { name = "Use table", entry = use_table },
+    }
 }
 
-dotest(cases, dotimes(100, 10))

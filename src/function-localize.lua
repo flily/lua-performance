@@ -1,6 +1,3 @@
-#!/usr/bin/lua
-
-require 'test'
 
 function nonlocal()
     local x = 0
@@ -19,9 +16,11 @@ function localized()
     return x
 end
 
-local cases = {
-    { name = "Non-local", code = nonlocal,  t = {} },
-    { name = "Localized", code = localized, t = {} }
+return {
+    name = "function-localize",
+    desc = "calling local/global functions",
+    cases = {
+        { name = "Non-local", entry = nonlocal },
+        { name = "Localized", entry = localized },
+    },
 }
-
-dotest(cases, dotimes(200, 2))

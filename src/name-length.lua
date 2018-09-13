@@ -1,7 +1,5 @@
 #!/usr/bin/lua
 
-require 'test'
-
 local states = {
     "alabama",          "alaska",       "arizona",          "arkansas",
     "california",       "colorado",     "connecticut",      "delaware",
@@ -76,17 +74,15 @@ function local_short()
     return an
 end
 
-local cases1 = {
-    { name = "Global long   ", code = global_long,   t = {} },
-    { name = "Global medium ", code = global_medium, t = {} },
-    { name = "Global short  ", code = global_short,  t = {} }
+return {
+    name = "name-length",
+    desc = "length of variable name",
+    cases = {
+        { name = "Global long   ", entry = global_long },
+        { name = "Global medium ", entry = global_medium },
+        { name = "Global short  ", entry = global_short },
+        { name = "Local long    ", entry = local_long },
+        { name = "Local medium  ", entry = local_medium },
+        { name = "Local short   ", entry = local_short },
+    },
 }
-
-local cases2 = {
-    { name = "Local long    ", code = local_long,    t = {} },
-    { name = "Local medium  ", code = local_medium,  t = {} },
-    { name = "Local short   ", code = local_short,   t = {} }
-}
-
-dotest(cases1, dotimes(200, 2))
-dotest(cases2, dotimes(200, 2))

@@ -1,7 +1,5 @@
 #!/usr/bin/lua
 
-require 'test'
-
 local states = {
     "alabama",          "alaska",       "arizona",          "arkansas",
     "california",       "colorado",     "connecticut",      "delaware",
@@ -62,12 +60,14 @@ function localize()
     end
 end
 
-local cases = {
-    { name = "Global function", code = gloal_func,  t = {} },
-    { name = "Global wrap    ", code = global_wrap, t = {} },
-    { name = "Local wrap     ", code = local_wrap,  t = {} },
-    { name = "From meta table", code = from_meta,   t = {} },
-    { name = "Localize       ", code = localize,    t = {} }
+return {
+    name = "meta-function",
+    desc = "implement with meta-function",
+    cases = {
+        { name = "Global function", entry = gloal_func },
+        { name = "Global wrap    ", entry = global_wrap },
+        { name = "Local wrap     ", entry = local_wrap },
+        { name = "From meta table", entry = from_meta },
+        { name = "Localize       ", entry = localize },
+    },
 }
-
-dotest(cases, dotimes(100, 2))

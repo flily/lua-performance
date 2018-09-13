@@ -44,7 +44,6 @@ usage()
     echo "  --lua51                find lua 5.1"
     echo "  --lua52                find lua 5.2"
     echo "  --lua53                find lua 5.3"
-    echo "  --python{VER}          find python in version VER"
     echo "  --with(out)-lua        find with or without lua official implement, included by default."
     echo "  --with(out)-luajit     find with or without luajit, excluded by deafult."
 }

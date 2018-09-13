@@ -1,7 +1,5 @@
 #!/usr/bin/lua
 
-require 'test'
-
 function fact_normal(x)
     local result = 1
     for i = 2, x do
@@ -45,20 +43,13 @@ function tail_recurse()
     return sum
 end
 
-local cases = {
-    { name = "Normal recurse", code = normal_recurse,  t = {} },
-    { name = "Normal loop   ", code = normal_loop, t = {} },
-    { name = "Tail recurse  ", code = tail_recurse, t = {} }
+return {
+    name = "tail-recursion",
+    desc = "tail recursion or normal loop",
+    cases = {
+        { name = "Normal recurse", entry = normal_recurse },
+        { name = "Normal loop   ", entry = normal_loop },
+        { name = "Tail recurse  ", entry = tail_recurse },
+    },
 }
 
--- for i = 1, 50 do
---     local x1 = fact_normal(i)
---     local x2 = fact_recurse(i)
---     local x3 = fact_tail(i)
---     if x1 == x2 and x2 == x3 then
---         print(x1)
---     else
---         print(x1, x2, x3)
---     end
--- end
-dotest(cases, dotimes(30, 20))

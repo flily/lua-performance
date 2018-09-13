@@ -1,6 +1,3 @@
-#!/usr/bin/lua
-
-require 'test'
 
 function direct_compute()
     local x = 0
@@ -30,11 +27,11 @@ function call_function()
     return x
 end
 
-local cases = {
-    { name = "Direct compute", code = direct_compute,  t = {} },
-    { name = "Call function ", code = call_function, t = {} }
+return {
+    name = "function-call",
+    desc = "function call vs in-line code",
+    cases = {
+        { name = "Direct compute", entry = direct_compute },
+        { name = "Call function ", entry = call_function },
+    },
 }
-
--- print(direct_compute())
--- print(call_function())
-dotest(cases, dotimes(200, 10))
