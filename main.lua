@@ -103,7 +103,7 @@ local function cmd_do_env()
 
     print("Environment information:")
     for k, v in pairs(env_info) do
-        print(string.format("  - %s: %s", k, v))
+        print(string.format("  - %s: %s", k, tostring(v)))
     end
 end
 
