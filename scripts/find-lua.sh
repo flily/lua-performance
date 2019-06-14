@@ -167,14 +167,14 @@ check_lua_in_path()
             fi
         done
 
-        if [ ! -z "${FOUND_LUA_PATH}" ]; then
+        if [ -n "${FOUND_LUA_PATH}" ]; then
             if [ "${FIND_ALL}" = "off" ]; then
                 break
             fi
         fi
     done
 
-    if [ ! -z "${FOUND_LUA_PATH}" ]; then
+    if [ -n "${FOUND_LUA_PATH}" ]; then
         echo "${FOUND_LUA_PATH}"
     fi
 }
@@ -185,7 +185,7 @@ find_lua()
     CHECK_PATH=""
     LUA_VERSION=""
 
-    while [ ! -z "$1" ]; do
+    while [ -n "$1" ]; do
         case "$1" in
             "/"*)
                 CHECK_PATH="${CHECK_PATH} $1"
@@ -221,8 +221,8 @@ find_lua()
 
     # check_path is empty, check for all directory listed.
     if [ -z "${CHECK_PATH}" ]; then
-        SYSTEM_LUA_PATH="$(which lua 2>/dev/null)"
-        if [ ! -z "${SYSTEM_LUA_PATH}" ]; then
+        SYSTEM_LUA_PATH="$(command -v lua 2>/dev/null)"
+        if [ -n "${SYSTEM_LUA_PATH}" ]; then
             PATH_PREFER_LIST="${PATH_PREFER_LIST} $(dirname "${SYSTEM_LUA_PATH}")"
         fi
 
