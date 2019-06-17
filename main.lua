@@ -133,7 +133,8 @@ local function cmd_do_run(names)
 
     print("Running environment")
     print(string.format("Lua syntax version %s, LuaJIT=%s",
-                        env_info["Syntax version"], env_info["Is LuaJIT"]))
+                        tostring(env_info["Syntax version"]),
+                        tostring(env_info["Is LuaJIT"])))
     print(string.rep("=", 60))
 
 
