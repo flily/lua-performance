@@ -80,6 +80,6 @@ and add to 'src/init.lua'
      "set-default-value",
      "table-append",
      "tail-recursion",
-+    "example.com",
++    "example",
  }
 ```
