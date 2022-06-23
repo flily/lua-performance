@@ -2,6 +2,13 @@ Lua脚本性能优化指南
 =================
 
 [![CI Lua 5.1](https://github.com/flily/lua-performance/actions/workflows/ci_lua51.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua51.yml)
+[![CI Lua 5.2](https://github.com/flily/lua-performance/actions/workflows/ci_lua52.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua52.yml)
+[![CI Lua 5.3](https://github.com/flily/lua-performance/actions/workflows/ci_lua53.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua53.yml)
+[![CI Lua 5.4](https://github.com/flily/lua-performance/actions/workflows/ci_lua54.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua54.yml)
+[![CI LuaJIT 2.0](https://github.com/flily/lua-performance/actions/workflows/ci_lj20.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lj20.yml)
+[![CI LuaJIT 2.1 beta](https://github.com/flily/lua-performance/actions/workflows/ci_lj21.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lj21.yml)
+[![CI LuaJIT 2 OpenResty Fork](https://github.com/flily/lua-performance/actions/workflows/ci_lj2resty.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lj2resty.yml)
+
 
 
 Lua脚本是C语言实现的脚本，广泛应用于客户端扩展脚本，例如魔兽世界等网游。但是Lua的性能一般，并且有许多不好的实现，误用会大大降低系统的性能。

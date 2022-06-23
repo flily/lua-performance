@@ -1,6 +1,16 @@
 lua-performance
 ===============
 
+[![CI Lua 5.1](https://github.com/flily/lua-performance/actions/workflows/ci_lua51.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua51.yml)
+[![CI Lua 5.2](https://github.com/flily/lua-performance/actions/workflows/ci_lua52.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua52.yml)
+[![CI Lua 5.3](https://github.com/flily/lua-performance/actions/workflows/ci_lua53.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua53.yml)
+[![CI Lua 5.4](https://github.com/flily/lua-performance/actions/workflows/ci_lua54.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua54.yml)
+[![CI LuaJIT 2.0](https://github.com/flily/lua-performance/actions/workflows/ci_lj20.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lj20.yml)
+[![CI LuaJIT 2.1 beta](https://github.com/flily/lua-performance/actions/workflows/ci_lj21.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lj21.yml)
+[![CI LuaJIT 2 OpenResty Fork](https://github.com/flily/lua-performance/actions/workflows/ci_lj2resty.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lj2resty.yml)
+
+
+
 A Lua performance guide for Lua and LuaJIT.
 
 TODO:
