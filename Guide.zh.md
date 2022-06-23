@@ -1,6 +1,9 @@
 Lua脚本性能优化指南
 =================
 
+[![CI Lua 5.1](https://github.com/flily/lua-performance/actions/workflows/ci_lua51.yml/badge.svg)](https://github.com/flily/lua-performance/actions/workflows/ci_lua51.yml)
+
+
 Lua脚本是C语言实现的脚本，广泛应用于客户端扩展脚本，例如魔兽世界等网游。但是Lua的性能一般，并且有许多不好的实现，误用会大大降低系统的性能。
 网络上有一些关于Lua脚本性能优化的资料，但是都是针对Lua撰写的，写作年代较早，一些优化技巧不完全正确，而且没有针对LuaJIT优化过后的代码进行考虑。
 本章对于Lua的一些语法，在Lua和LuaJIT中进行比较测试，并给出相关优化数据和结论。

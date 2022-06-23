@@ -1,4 +1,4 @@
-name: CI Lua 5.1
+name: CI Lua 5.2
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Lua
         uses: leafo/gh-actions-lua@v9
         with:
-          luaVersion: "5.1.5"
+          luaVersion: "5.2.4"
 
       - name: Show Lua Version Report
         working-directory: ${{ github.workflow.workflow_root }}
