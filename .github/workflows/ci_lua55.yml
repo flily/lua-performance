@@ -1,4 +1,4 @@
-name: CI Lua 5.4
+name: CI Lua 5.5
 
 on:
   push:
