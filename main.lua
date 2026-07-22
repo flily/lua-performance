@@ -52,8 +52,11 @@ function dotest(cases, times)
         
         if i == 1 then base = avg end
         local per = avg / base
+
+        local avgs = string.format("%.3f", avg)
+        local pers = string.format("%.3f%%", round(100*per, 2))
     
-        print(i, case.name, t[1], t[2], t[3], t[4], t[5], avg, round(100*per,2) .. "%")
+        print(i, case.name, t[1], t[2], t[3], t[4], t[5], avgs, pers)
     end
     print("----------------")
 end
